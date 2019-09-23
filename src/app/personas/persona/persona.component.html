@@ -1,0 +1,15 @@
+<div class="item">
+
+  <ul>
+    <li>
+
+      <!--
+      [queryParams]  // ENVIA PARAMETROS COMO SI FUERA GET
+      -->
+      <a [routerLink]="['/personas', indice]"
+          [queryParams]="{modoEdicion:'1'}">
+        <p>{{indice+1}}: {{persona.nombre}} {{persona.apellido}}</p>
+      </a>
+    </li>
+  </ul>
+</div>

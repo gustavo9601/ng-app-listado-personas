@@ -1,0 +1,22 @@
+
+<div *ngIf="!_loginService.isAutenticado()" class="box centrado">
+  <a routerLink="/login">Login</a>
+</div>
+
+
+<div *ngIf="_loginService.isAutenticado()" class="box centrado">
+  <a (click)="salir()" >Salir</a>
+</div>
+
+<div class="box" id="heading">
+  <h1>Listado de Personas</h1>
+</div>
+
+
+
+<!--Ya no cargamos directamente el componente si no que usamos
+el router outlet que dependiendo de la ruta carga los componentes
+-->
+<!--<app-personas></app-personas>-->
+
+<router-outlet></router-outlet>
